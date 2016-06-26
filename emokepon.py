@@ -32,7 +32,7 @@ class Pokemon():
             print(random.choice(defender.phrases))
             print("You attacked the corpse of {}, you sicko.".format(defender.name))
 
-        print()    
+        print()
         input("Press anything to go to the next round")
 
 #--------------------------------
@@ -64,9 +64,9 @@ print("Charmander's hit points are:", charmander.health_points)
 #----------------------------------
 #--ROUND LOGIC
 #---------------------------------
-thisround = 1
-while True:
-    print("\n---------Round %d ----------" %thisround)
+
+for round_number in range(10):
+    print("\n---------Round {} ----------".format(round_number))
 
     attacker = random.choice(pokemons)
     print("The attacker is:", attacker.name)
@@ -76,8 +76,3 @@ while True:
     print("The defender is:", defender.name)
 
     attacker.attack(defender)
-
-    thisround += 1
-
-    if thisround >= 11:
-        break
